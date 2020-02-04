@@ -1,0 +1,64 @@
+.rounded-circle{
+    width: 45px;
+    height: 45px;
+  }
+  
+  nav{
+    margin-left: 2%;
+    margin-right: 2%;
+    font-size: 12px;
+  }
+  
+  .navbar-brand{
+    font-size: 15px;
+    font-weight: bold;
+  }
+  
+  @media screen and (min-width:1092px){
+    .email{
+  
+      padding-top: 15px !important;
+    }
+  }
+  
+  nav{
+    margin-left: 3%;
+    margin-right: 3%;
+}
+i{
+    
+    margin: 5%;
+}
+.containers{
+    width: 10%;
+    float: left !important;
+}
+#home{
+    margin-left: 3% !important;
+    margin-right: 3% !important;
+    margin: 1%;
+    width: 94%;
+    background-color: white;
+}
+h7{
+    font-size: 10px;
+}
+#buscador{
+    display: flexbox;
+    float: right !important;
+   text-align: right;
+   }
+   .col{
+    font-size: 12px;
+    font-weight: bold;
+}
+#cata{
+    font-size: 21px;
+    margin-top: 2%;
+    font-weight: bold;
+}
+#que{
+    font-size: 17px;
+    font-weight: bold;
+    margin-right: 4%;
+}

@@ -1,0 +1,31 @@
+<app-barra-navegacion></app-barra-navegacion>
+<div class="container-fluid fondo-principal">
+    <div class="">
+        <div class="row card-body">
+            <div class="row card col-sm-12">
+                <div class="row title">
+                    <h1>{{productoSeleccionado.producto}} </h1>
+                </div>
+                <hr class="my-4">
+                <div class="row">
+                    <div class="card-image col-sm-6">
+                        <img src="assets/{{productoSeleccionado.url}}" class="img-thumbnail imgProd" />
+                        <br>
+                    </div>
+                    <div class="col-sm-6 descripcion">
+                        <br>
+                        <label class="precioProd"><b>Precio:</b> $<span>{{productoSeleccionado.precio}} </span></label>
+                        <br>
+                        <label class="cantidadProd"><b>Unidades disponibles: </b> <span>
+                                {{productoSeleccionado.cantidad}}</span></label>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                <div class="row btn-group">
+                    <a [routerLink]="['/home']" class="btn btn-info" type="" id=""   value="Ver Más" >Volver</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

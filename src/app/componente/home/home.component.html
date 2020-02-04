@@ -1,0 +1,46 @@
+<app-barra-navegacion></app-barra-navegacion>
+<div id="home" class="container-fluid">
+    <div class="row">
+        <div id="cata" class="col-8">Catalogos de Productos</div>
+        <div id="buscador" class="col-4">
+            <div class="col-lg-12">
+                <label id="que"> ¿Que estas buscando</label>
+            </div>
+            <div>
+                <input class="form-control col-lg-8 offset-lg-4" [(ngModel)]="buscar" type="text"
+                    placeholder="Busca Producto">
+            </div>
+        </div>
+    </div>
+    <hr class="my-4">
+    <div class="row card-body">
+        <div class="card col-md-3 col-sm-12 collection" *ngFor="let item of productos">
+            <div *ngIf="buscar == '' || item.producto.toLowerCase().includes(buscar.toLowerCase())">
+                <img src="assets/{{item.url}}" class="img-thumbnail imgProd" />
+                <br>
+                <div class="col-sm-12">
+                    <label class="nombreProd">{{item.producto}}</label>
+                    <br>
+                    <label class="precioProd"><b>Precio:</b> $<span>{{item.precio}}</span></label>
+                    <br>
+                    <label class="cantidadProd"><b>Unidades disponibles:</b> <span> {{item.cantidad}}</span></label>
+                    <br>
+                    <div class="col-sm-5 accionProd">
+                    </div>
+                    <a [routerLink]="['/productos',item.producto]" class="btn btn-info btn-sm" type="" id="vermas"
+                        value="Ver Más">Ver Más</a>
+                    <div class="row btn-group">
+                        <form id="anadir" #formAdd="ngForm" (ngSubmit)="onAnadir($event,formAdd.value)">
+                            <input class="btn btn-danger btn-sm " type="submit" value="Añadir"
+                                id="{{item.producto}} {{item.precio}} {{item.cantidad}} {{item.url}}  " />
+                            <input class="btn-sm" id="{{item.producto}}" name="{{item.producto}}" type="number"
+                                placeholder="1" min="1" max="{{item.cantidad}}" value="1"
+                                (click)="onCantidad($event)" />
+                        </form>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

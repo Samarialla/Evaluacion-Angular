@@ -1,0 +1,67 @@
+<app-barra-navegacion></app-barra-navegacion>
+<div class="container-fluid fondo-principal">
+    <div class="">
+        <div class="row card-body">
+            <div class="row card col-sm-12">
+                <div class="row title">
+                    <h2><i fa class=""></i> Carrito de Compras</h2>
+                </div>
+                <hr class="my-4">
+                <div class="row card-body" *ngFor="let item of pedidos">
+                    <div class="col-sm-7 productosSel">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <img src="assets/{{item.url}}" class="img-thumbnail imgProd" />
+                            </div>
+                            <div class="col-sm-9 descripcion">
+                                    <h2> <label class="nombreProd"><b><span>{{item.id}}</span></b></label></h2>
+                                <br>
+                                <label class="cantidadProd"><b>Unidades:</b> {{item.cantidad}} 
+                                    <span></span></label>
+                                <br>
+                                <label class="precioProd"><b>Precio Unidad:</b> {{item.precio}} </label>
+                                    <br>
+                                    <!--en caso que el valor de la suma se incorrecta<span>{{item.cantidad * item.precio}} </span></label>-->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="subtotal"><b>Subtotal: $</b><span>{{item.subtotal}}</span></label>
+                            <br>
+                        </div>
+                        <hr class="my-4">
+                    </div>
+
+                </div>
+
+                <div class="row btn-group">
+                    <div class="col-sm-5 descripcion">
+                        <div class="row">
+                            <div class="col-sm-12 containertotal">
+                                <div class="row totalLabel">
+                                    <br>
+                                    <label class="total">
+                                        <h1>Total: $<span>{{calcularTotal()}}</span></h1>
+                                    </label>
+                                    <br>
+                                </div>
+                                <div class="row btn-group">
+                                   
+                                    <button type="button" class="btn btn-success btn-sm"
+                                        (click)="pagar()">Pagar</button>
+                        
+                                </div>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-template #noProductos>
+        <hr>
+        <h6>No hay productos en el carrito de compras</h6>
+    </ng-template>
+</div>

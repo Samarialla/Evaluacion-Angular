@@ -1,0 +1,41 @@
+h1{
+    color: white;
+    margin-left: 45%;
+    /*margin-top: 15% !important;*/
+    
+}
+.container{
+    margin-top: 10% !important;
+}
+h4{
+    color: white;
+}
+.from-control{
+    margin: 3%;
+    margin-left: 10% !important;
+}
+.btn{
+    margin-top: 2% !important;
+}
+input{
+    margin-top: 1% !important;
+}
+#alert{
+    color: red;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;    
+}
+#fondoPrincipal{
+    height:100vw;
+    width: 100vw;
+    margin-left:0px;
+   /* background: url('imagenesBase/login-fondo.jpg') ;*/
+    background-position: center center;
+    background-size: cover;
+    background-color: #ffffff;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  
