@@ -62,3 +62,40 @@ h7{
     font-weight: bold;
     margin-right: 4%;
 }
+
+
+a{
+  margin-right: 5%;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 16px;
+}
+.quick-btn {
+  position: relative;
+  /*display: inline-block;*/
+  width: 25px;
+  height: 30px;
+  /*padding-top: 16px;
+  margin: 10px;*/
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  /*text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);*/
+  /*-webkit-box-shadow: 0 0 0 1px #F8F8F8 inset, 0 0 0 1px #CCCCCC;*/
+  /*box-shadow: 0 0 0 1px #F8F8F8 inset, 0 0 0 1px #CCCCCC;*/
+}
+.quick-btn .label {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+.notificacion{
+  margin-top: 35%;
+}
+.label-success{
+  color:red;
+  font-size: 12px;
+  text-shadow: 0 1px 0 white;
+  
+
+}
