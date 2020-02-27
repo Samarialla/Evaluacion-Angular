@@ -138,9 +138,11 @@ h7{
   }
   
   .imgProd{
-    border: 0px;
+    border: 1px;
     width: 100% !important;
     height: 150px !important;
+    border-radius: 15px;
+    box-shadow: white
   }
   
   @media screen and (min-width: 730px){
@@ -156,5 +158,9 @@ h7{
       max-height: 50%;
     }
   
+  }
+
+  .card-body{
+    border-radius: 10px
   }
   
